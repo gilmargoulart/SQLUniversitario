@@ -4,4 +4,4 @@ Repositório com scripts SQLs disponibilizados para fins de aprendizagem em banc
 
 ## Compatibilidade
 
-Atualmente os scripts são preparados para tecnologias Microsoft SQL Server. 
+Atualmente os scripts são preparados para tecnologias Microsoft SQL Server, porém a conversão e disponibilização dos scripts podem ser feitos por meio de pull requests. 
