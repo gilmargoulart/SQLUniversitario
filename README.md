@@ -1,3 +1,6 @@
+![GitHub Logo](/images/sqluniversitario.png)
+Format: ![Alt Text](url)
+
 # SQLUniversitario
 
 Repositório com scripts SQLs disponibilizados para fins de aprendizagem em banco de dados.
