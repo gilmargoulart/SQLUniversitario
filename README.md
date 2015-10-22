@@ -1,4 +1,4 @@
-![GitHub Logo](https://github.com/rdornel/SQLUniversitario/blob/master/Images/sqluniversitario.png) =250x
+![GitHub Logo](https://github.com/rdornel/SQLUniversitario/blob/master/Images/sqluniversitario.png)
 
 # SQLUniversitario
 
