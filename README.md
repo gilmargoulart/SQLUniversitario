@@ -1,4 +1,4 @@
-![GitHub Logo](/images/sqluniversitario.png)
+![GitHub Logo](https://github.com/rdornel/SQLUniversitario/blob/master/Images/sqluniversitario.png)
 Format: ![Alt Text](url)
 
 # SQLUniversitario
