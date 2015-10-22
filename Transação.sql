@@ -14,12 +14,13 @@ CREATE TABLE [ALUNOS]
 GO
 SELECT * FROM ALUNOS
 
-BEGIN TRAN DORNEL
+BEGIN TRAN 
 
 INSERT dbo.ALUNOS 
         ( NOME, CPF )
 VALUES  ( 'JOÃO','11111111111')
 
+delete
 /*Abra outra guia e execute o comando abaixo*/
 SELECT * FROM dbo.ALUNOS (NOLOCK)
 
