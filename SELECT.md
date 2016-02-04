@@ -6,6 +6,6 @@ Repositório com scripts SQLs disponibilizados para fins de aprendizagem em banc
 
 Atualmente os scripts são preparados para tecnologias Microsoft SQL Server, porém a conversão e disponibilização dos scripts podem ser feitos por meio de pull requests. 
 
-'''PLSQL
+```PLSQL
 
 SELECT * FROM TABELA
