@@ -1,9 +1,9 @@
 /*
-Crie uma Trigger que controle a movimentação
+Crie uma Trigger que controle a movimentaÃ§Ã£o
 do estoque dessa empresa.
-Cada vez que um produto chega, é lançado na tabela
-movimentação um registro E (Entrada) e quando é
-vendido lança um registro S (Saída).
+Cada vez que um produto chega, Ã© lanÃ§ado na tabela
+movimentaÃ§Ã£o um registro E (Entrada) e quando Ã©
+vendido lanÃ§a um registro S (SaÃ­da).
 Essa quantidade recebida ou vendida deve ser atualizada
 na tabela estoque.
 */
@@ -45,18 +45,43 @@ INSERT Movimentos
 (ProdutoCodigo, Quantidade,EntradaSaida,DataEntradaSaida)
 VALUES  (7,30,'E',GETDATE())
 GO
+
+--logica da trigger
+create trigger TG_Movimentos
+on Movimentos
+For insert 
+as 
+begin
+declare @operacao varchar (1)
+	set @operacao = (select EntradaSaida from inserted)
+if @operacao= 'E'
+begin
+	update Estoque SET Quantidade = Quantidade + (Select inserted.Quantidade FROM inserted)
+	WHERE ProdutoCodigo = (select inserted.ProdutoCodigo from inserted)
+end
+else 
+begin
+	update Estoque SET Quantidade = Quantidade - (Select inserted.Quantidade FROM inserted)
+	WHERE ProdutoCodigo = (select inserted.ProdutoCodigo from inserted)
+end 
+end
+
+
+
+
+
 SELECT * FROM dbo.Movimentos
 GO
 SELECT * FROM dbo.Estoque
 GO
 /*
-Crie um índice que auxilie a consulta abaixo
+Crie um Ã­ndice que auxilie a consulta abaixo
 */
 SELECT DataEntradaSaida
 FROM Movimentos
 WHERE Movimentos.EntradaSaida = 'E'
 /*
-Crie uma função que retorne a idade da pessoa
+Crie uma funÃ§Ã£o que retorne a idade da pessoa
 em anos
 */
 CREATE TABLE [dbo].[Pessoa](
